@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantos custa a consulta com um nutrólogo?</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #0f4c81;
+      --border: #e5e7eb;
+      --max-width: 1240px;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(100% - 32px, var(--max-width));
+      margin: 40px auto;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .post {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .post-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .post-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .post-excerpt {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .post-cover {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      background: #eef2f7;
+    }
+
+    .post-cover img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .post-content h1 {
+      font-size: 2rem;
+      margin: 0 0 20px;
+      line-height: 1.2;
+    }
+
+    .post-content h2 {
+      font-size: 1.6rem;
+      margin: 34px 0 14px;
+      line-height: 1.25;
+    }
+
+    .post-content h3 {
+      font-size: 1.25rem;
+      margin: 26px 0 12px;
+      line-height: 1.3;
+    }
+
+    .post-content p {
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .post-content ul,
+    .post-content ol {
+      margin: 0 0 20px 22px;
+    }
+
+    .post-content li {
+      margin-bottom: 8px;
+    }
+
+    .post-content blockquote {
+      border-left: 4px solid var(--primary);
+      background: #f8fbff;
+      padding: 16px 18px;
+      margin: 24px 0;
+      color: #374151;
+      border-radius: 8px;
+    }
+
+    .post-content img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 24px 0;
+    }
+
+    .post-footer {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .content-inline-related {
+      margin: 28px 0 26px;
+      padding-left: 14px;
+      border-left: 4px solid #e67e22;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .content-inline-related-label {
+      font-weight: 800;
+      color: #4a4a4a;
+    }
+
+    .content-inline-related-link {
+      color: #e67e22;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
+    }
+
+    .content-inline-related-link:hover {
+      color: #c96a17;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card,
+    .bottom-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar-title,
+    .bottom-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .sidebar-list,
+    .bottom-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .sidebar-item,
+    .bottom-item {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar-item:last-child,
+    .bottom-item:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .sidebar-link,
+    .bottom-link {
+      display: block;
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .sidebar-link:hover,
+    .bottom-link:hover {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .sidebar-meta,
+    .bottom-meta {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .post-bottom {
+      margin-top: 28px;
+    }
+
+    .loading-text,
+    .empty-text {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1024px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wrap {
+        margin: 20px auto;
+      }
+
+      .post {
+        padding: 22px;
+      }
+
+      .sidebar-card,
+      .bottom-card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="layout">
+      <article class="post">
+        <div class="post-meta">
+          undefined • por undefined • Categoria: undefined
+        </div>
+
+        <h1 class="post-title">Quantos custa a consulta com um nutrólogo?</h1>
+
+        <p class="post-excerpt">undefined</p>
+
+        <div class="post-cover">
+          <img src="undefined" alt="undefined">
+        </div>
+
+        <div class="post-content">
+          <h1>Quantos custa a consulta com um nutrólogo?</h1>
+
+<p>Buscar orientação de um nutrólogo pode ser uma excelente alternativa para quem deseja melhorar a saúde e a qualidade de vida por meio da alimentação adequada. Porém, muitas pessoas têm dúvidas sobre os valores praticados e se as consultas realmente valem o investimento. Este artigo foi pensado justamente para esclarecer esses pontos, detalhando não apenas o que faz um nutrólogo, mas também os fatores que influenciam nos custos e como fazer uma escolha consciente.<br><br>Ao longo do texto, você vai descobrir as principais diferenças entre nutrólogos e nutricionistas e encontrar dicas valiosas para economizar na marcação da sua consulta. Vamos nessa?</p>
+
+<h2>O que é um nutrólogo e qual o seu papel?</h2>
+
+<p>Médicos nutrólogos são profissionais formados em medicina, com especialização no estudo dos alimentos e sua interação com o organismo. Eles são habilitados para investigar, diagnosticar e tratar doenças relacionadas à má nutrição, desde problemas metabólicos até distúrbios alimentares.<br><br>O papel do nutrólogo vai além da prescrição de dietas: ele pode solicitar exames, acompanhar tratamentos clínicos e propor mudanças de hábitos alimentares. A consulta costuma ser detalhada, avaliando não só a alimentação, mas também histórico de saúde, estilo de vida e fatores hereditários.<br><br>Ao buscar por uma <a href="https://saopaulonutrologo.com.br">consulta nutrologo</a>, o paciente estará dando um passo fundamental para uma abordagem médica e preventiva na promoção da saúde.</p>
+
+<h2>Fatores que influenciam o custo da consulta com um nutrólogo</h2>
+
+<p>Vários aspectos influenciam o valor cobrado por uma consulta com um nutrólogo. A localização da clínica ou consultório costuma ser determinante – em grandes cidades, principalmente em regiões centrais, os preços tendem a ser mais altos.<br><br>A experiência e a formação do profissional também fazem diferença: nutrólogos renomados ou com títulos de especialização podem cobrar mais caro. Outro fator importante é o tempo de duração da consulta, bem como a complexidade do atendimento.<br><br>Consultas de primeira vez geralmente são mais extensas e, por isso, um pouco mais caras que retornos. Além disso, a inclusão de exames laboratoriais pode impactar no valor total do acompanhamento.</p>
+
+<h2>Diferenças entre consulta com nutrólogo e nutricionista</h2>
+
+<p>Entender as principais distinções entre nutrólogo e nutricionista é fundamental para escolher o profissional mais adequado às suas necessidades. O nutrólogo é médico e pode diagnosticar doenças, solicitar exames, prescrever medicamentos e indicar tratamentos clínicos.<br><br>Já o nutricionista foca na elaboração de planos alimentares personalizados, priorizando a reeducação alimentar e o equilíbrio nutricional. Enquanto o nutrólogo lida com aspectos mais clínicos e patologias, o nutricionista atua diretamente na prevenção e promoção da saúde por meio de dietas.<br><br>Em consultas complexas ou quando há suspeita de doenças associadas, o acompanhamento do nutrólogo é especialmente indicado.</p>
+
+<h2>Dicas para economizar na consulta com um nutrólogo</h2>
+
+<p>Para quem quer investir em saúde, mas sem pesar no bolso, existem alternativas para encontrar uma consulta médica acessível. Pesquisar profissionais em diferentes plataformas online pode revelar boas opções de preço. Verifique também se o seu plano de saúde cobre atendimentos com nutrólogo, já que isso pode reduzir significativamente o valor a ser pago.<br><br>Alguns profissionais oferecem pacotes de acompanhamento ou promoções para consultas de retorno. Vale ainda buscar grupos de clínicas que trabalham com valores sociais ou atendimentos compartilhados, que costumam ser mais baratos.<br><br>Planejar a consulta com antecedência e selecionar um profissional de confiança é fundamental para garantir o melhor custo-benefício.</p>
+
+<h2>Quando vale a pena investir em uma consulta com um nutrólogo?</h2>
+
+<p>Avaliar o melhor momento para agendar um atendimento médico é uma decisão pessoal, mas há situações em que o investimento em uma consulta com nutrólogo faz grande diferença. Pessoas com doenças metabólicas, distúrbios alimentares ou dificuldades crônicas para perda ou ganho de peso podem se beneficiar bastante do acompanhamento especializado.<br><br>Quem busca prevenção de doenças ou ajuste criterioso de suplementação também encontra vantagens. O olhar clínico do nutrólogo é determinante quando há suspeita de carência nutricional ou consequências da má alimentação.<br><br>Sempre que houver dúvidas sobre saúde metabólica e alimentação, buscar uma avaliação profissional será um investimento em qualidade de vida e bem-estar.</p>
+
+<h2>Conclusão</h2>
+
+<p>Refletir sobre o custo de uma consulta com nutrólogo passa por entender a importância desse especialista em medicina alimentar e preventiva. Ao esclarecer os fatores que influenciam o valor, as diferenças entre o nutrólogo e o nutricionista, além das dicas para economizar, fica mais fácil perceber quando marcar uma consulta é de fato o melhor investimento para a saúde.<br><br>Considerar acompanhamento médico especializado, especialmente em situações clínicas específicas, aumenta as chances de sucesso em tratamentos e na adoção de hábitos mais saudáveis. Avalie suas necessidades e invista com consciência no cuidado do seu bem-estar.</p>
+        </div>
+
+        <div class="post-footer">
+          Última atualização: undefined
+        </div>
+
+        <section class="post-bottom">
+          <div class="bottom-card">
+            <h2 class="bottom-title">Mais conteúdos para você</h2>
+            <div id="bottom-featured-posts">
+              <p class="loading-text">Carregando conteúdos...</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <aside class="sidebar">
+        <section class="sidebar-card">
+          <h2 class="sidebar-title">Posts recentes</h2>
+          <div id="recent-posts">
+            <p class="loading-text">Carregando posts recentes...</p>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    async function fetchJson(path) {
+      const response = await fetch(path, { cache: 'no-cache' });
+      if (!response.ok) {
+        throw new Error('Erro ao carregar ' + path);
+      }
+      return response.json();
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function normalizePath(url) {
+      try {
+        const parsed = new URL(url, window.location.origin);
+        return parsed.pathname.replace(/\/+$/, '') || '/';
+      } catch {
+        return String(url || '')
+          .replace(window.location.origin, '')
+          .replace(/\/+$/, '') || '/';
+      }
+    }
+
+    function renderRecentPosts(posts) {
+      const container = document.getElementById('recent-posts');
+      if (!container) return;
+
+      if (!posts.length) {
+        container.innerHTML = '<p class="empty-text">Nenhum post recente encontrado.</p>';
+        return;
+      }
+
+      container.innerHTML = `
+        <ul class="sidebar-list">
+          ${posts.map(post => `
+            <li class="sidebar-item">
+              <a href="${escapeHtml(post.url)}" class="sidebar-link">${escapeHtml(post.title)}</a>
+              <span class="sidebar-meta">${escapeHtml(post.date || '')}${post.category ? ' • ' + escapeHtml(post.category) : ''}</span>
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    }
+
+    function renderBottomFeatured(posts) {
+      const container = document.getElementById('bottom-featured-posts');
+      if (!container) return;
+
+      if (!posts.length) {
+        container.innerHTML = '<p class="empty-text">Nenhum conteúdo adicional encontrado.</p>';
+        return;
+      }
+
+      container.innerHTML = `
+        <ul class="bottom-list">
+          ${posts.map(post => `
+            <li class="bottom-item">
+              <a href="${escapeHtml(post.url)}" class="bottom-link">${escapeHtml(post.title)}</a>
+              <span class="bottom-meta">${escapeHtml(post.date || '')}${post.category ? ' • ' + escapeHtml(post.category) : ''}</span>
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    }
+
+    async function loadDynamicPostWidgets() {
+      try {
+        const currentPath = normalizePath(window.location.pathname);
+
+        const [recentPostsRaw, featuredPostsRaw] = await Promise.all([
+          fetchJson('/data/recent-posts.json'),
+          fetchJson('/data/featured-posts.json')
+        ]);
+
+        const recentPosts = Array.isArray(recentPostsRaw) ? recentPostsRaw : [];
+        const featuredPosts = Array.isArray(featuredPostsRaw) ? featuredPostsRaw : [];
+
+        const filteredRecent = recentPosts
+          .filter(post => normalizePath(post.url) !== currentPath)
+          .slice(0, 6);
+
+        const bottomFeatured = featuredPosts
+          .filter(post => normalizePath(post.url) !== currentPath)
+          .slice(0, 12);
+
+        renderRecentPosts(filteredRecent);
+        renderBottomFeatured(bottomFeatured);
+      } catch (error) {
+        console.error(error);
+
+        const recentEl = document.getElementById('recent-posts');
+        const bottomEl = document.getElementById('bottom-featured-posts');
+
+        if (recentEl) {
+          recentEl.innerHTML = '<p class="empty-text">Não foi possível carregar os posts recentes.</p>';
+        }
+
+        if (bottomEl) {
+          bottomEl.innerHTML = '<p class="empty-text">Não foi possível carregar os conteúdos relacionados.</p>';
+        }
+      }
+    }
+
+    loadDynamicPostWidgets();
+  </script>
+</body>
+</html>
