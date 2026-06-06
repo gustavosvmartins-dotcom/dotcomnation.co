@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ansiedade e depressão: como os manauaras estão lidando?</title>
+  <meta name="description" content="Descubra como os manauaras lidam com ansiedade e depressão. Veja estratégias, recursos locais e dicas para melhorar a saúde mental em Manaus. Confira!" />
+  <link rel="stylesheet" href="/css/blog-theme.css" />
+  <style>
+    .container {
+      width: min(100% - 32px, 1120px);
+      margin: 0 auto;
+    }
+
+    .blog-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .blog-header__top {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .blog-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .blog-logo__image {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .blog-main-nav {
+      display: none;
+    }
+
+    /* NAV DROPDOWN */
+    .blog-nav-dropdown { position: relative; }
+    .dropdown-toggle {
+      display: flex; align-items: center; gap: 4px;
+      color: #3d3d3d; font-size: 14px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      background: none; border: none; cursor: pointer;
+      padding: 0; font-family: inherit;
+    }
+    .dropdown-toggle:hover { color: #36b1df; }
+    .dropdown-toggle::after { content: "▾"; font-size: 12px; transition: transform 0.2s ease; }
+    .dropdown-toggle.active::after { transform: rotate(180deg); }
+    .dropdown-menu {
+      display: none; position: absolute; top: calc(100% + 12px); right: 0;
+      background: #fff; border: 1px solid #e0e0e0; border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08); min-width: 200px; z-index: 100; overflow: hidden;
+    }
+    .dropdown-menu.open { display: block; }
+    .dropdown-menu a {
+      display: block; padding: 12px 16px; color: #3d3d3d;
+      font-size: 14px; font-weight: 500; text-transform: uppercase;
+      text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: background 0.2s ease;
+    }
+    .dropdown-menu a:last-child { border-bottom: none; }
+    .dropdown-menu a:hover { background: #f5fbff; color: #36b1df; }
+
+    /* HAMBURGUER */
+    .blog-menu-toggle {
+      display: flex; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .blog-menu-toggle span { display: block; width: 24px; height: 2px; background: #3d3d3d; border-radius: 2px; transition: all 0.3s ease; }
+    .blog-menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .blog-menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .blog-menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* MOBILE MENU */
+    .blog-mobile-menu { display: none; flex-direction: column; background: #fff; border-top: 1px solid #e0e0e0; padding: 16px 0; }
+    .blog-mobile-menu.open { display: flex; }
+    .blog-mobile-menu a { padding: 12px 16px; color: #3d3d3d; font-size: 14px; font-weight: 600; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid #f0f0f0; }
+    .blog-mobile-menu a:last-child { border-bottom: none; }
+    .blog-mobile-menu a:hover { color: #36b1df; }
+
+    .blog-page {
+      padding: 24px 0 56px;
+    }
+
+    .breadcrumbs {
+      margin: 0 0 16px;
+      color: #7a7a7a;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .breadcrumbs a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .post-article { min-width: 0; }
+
+    .article-badge { margin-bottom: 14px; }
+
+    .post-title {
+      color: #3d3d3d;
+      font-size: 34px;
+      line-height: 42px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .post-excerpt {
+      color: #3d3d3d;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    .post-meta {
+      color: #7a7a7a;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    .post-cover {
+      margin-bottom: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+
+    .post-cover img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .post-content { color: #3d3d3d; }
+
+    .post-content h1,
+    .post-content h2,
+    .post-content h3 {
+      color: #3d3d3d;
+      font-weight: 600;
+    }
+
+    .post-content h1 { font-size: 30px; line-height: 38px; margin: 0 0 18px; }
+    .post-content h2 { font-size: 26px; line-height: 34px; margin: 32px 0 14px; }
+    .post-content h3 { font-size: 22px; line-height: 30px; margin: 24px 0 12px; }
+
+    .post-content p,
+    .post-content li { font-size: 18px; line-height: 30px; }
+
+    .post-content p { margin-bottom: 18px; }
+    .post-content ul, .post-content ol { margin: 0 0 20px 22px; }
+    .post-content li { margin-bottom: 8px; }
+    .post-content a { color: #36b1df; text-decoration: underline; }
+    .post-content img { width: 100%; display: block; border-radius: 8px; margin: 24px 0; }
+    .post-content blockquote {
+      margin: 24px 0; padding: 16px 20px;
+      border-left: 4px solid #36b1df;
+      background: #f2f6f9; border-radius: 8px;
+    }
+
+    .post-footer {
+      margin-top: 32px; padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      color: #7a7a7a; font-size: 14px; line-height: 20px;
+    }
+
+    .content-inline-related {
+      margin: 28px 0 26px; padding-left: 14px;
+      border-left: 4px solid #e67e22;
+      font-size: 16px; line-height: 24px;
+    }
+
+    .content-inline-related-label { font-weight: 700; color: #3d3d3d; }
+    .content-inline-related-link { color: #e67e22; font-weight: 600; text-decoration: underline; }
+
+    .post-bottom {
+      margin-top: 36px; border-top: 1px solid #e0e0e0; padding-top: 24px;
+    }
+
+    .section-title {
+      color: #3d3d3d; font-size: 26px; line-height: 34px;
+      font-weight: 600; margin-bottom: 20px;
+    }
+
+    .bottom-list, .sidebar-list { list-style: none; margin: 0; padding: 0; }
+
+    .bottom-item, .sidebar-item {
+      padding: 16px 0; border-bottom: 1px solid #e0e0e0;
+    }
+
+    .bottom-item:first-child, .sidebar-item:first-child { padding-top: 0; }
+    .bottom-item:last-child, .sidebar-item:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .bottom-link, .sidebar-link {
+      display: block; color: #3d3d3d;
+      font-size: 18px; line-height: 26px;
+      font-weight: 600; text-decoration: none;
+    }
+
+    .bottom-meta, .sidebar-meta {
+      display: block; margin-top: 6px;
+      color: #7a7a7a; font-size: 13px; line-height: 18px;
+    }
+
+    .post-sidebar { min-width: 0; }
+
+    .sidebar-block {
+      position: sticky; top: 100px;
+      border-top: 1px solid #e0e0e0; padding-top: 20px;
+    }
+
+    .loading-text, .empty-text { color: #7a7a7a; font-size: 14px; line-height: 20px; }
+
+    #footer {
+      background: #ebf0f4; margin-top: 64px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    #footer .footer-tuasaude { padding: 40px 0 0; }
+
+    #footer .footer-wrapper {
+      display: grid; grid-template-columns: 1fr; gap: 24px;
+    }
+
+    .footer-logo {
+      display: inline-flex; align-items: center;
+      gap: 10px; text-decoration: none;
+    }
+
+    .footer-logo__image { height: 36px; width: auto; display: block; }
+
+    .footer-text { color: #3d3d3d; font-size: 14px; line-height: 22px; max-width: 640px; }
+
+    .footer-menu ul {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+
+    .footer-menu ul li a { color: #3d3d3d; font-size: 14px; line-height: 20px; text-decoration: none; }
+
+    .footer-group { border-top: 1px solid #e0e0e0; margin-top: 8px; }
+
+    .footer-update-copy {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 10px; padding: 20px 0; color: #7a7a7a;
+      font-size: 12px; line-height: 16px;
+    }
+
+    .footer-update-copy .dot {
+      width: 4px; height: 4px; border-radius: 50%; background: #36b1df;
+    }
+
+    @media screen and (min-width: 1050px) {
+      .blog-main-nav {
+        display: flex; align-items: center; gap: 32px;
+        flex: 1; justify-content: center;
+      }
+
+      .blog-main-nav a {
+        color: #3d3d3d; text-decoration: none;
+        font-size: 14px; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.5px;
+        transition: color 0.2s ease;
+      }
+
+      .blog-main-nav a:hover { color: #36b1df; }
+
+      .blog-menu-toggle { display: none; }
+      .blog-mobile-menu { display: none !important; }
+
+      .page-grid {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 48px;
+      }
+
+      #footer .footer-wrapper {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        align-items: start;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/webp" href="/img/favicon-medico.webp">
+  <link rel="shortcut icon" href="/img/favicon-medico.webp">
+  <link rel="apple-touch-icon" href="/img/favicon-medico.webp">
+  <meta name="google-site-verification" content="f8jkzQQ-bE1aPU8BJPA9cSEnC0AMyIPylp1HwGU_MK0" />
+</head>
+<body>
+  <header class="blog-header">
+    <div class="container blog-header__top">
+      <a href="https://dotcomnation.co" class="blog-logo">
+        <img src="/img/logo-blog.webp" alt="DOTCOM Nation" class="blog-logo__image">
+      </a>
+
+      <nav class="blog-main-nav">
+        <a href="/categoria/saude/">Saúde</a>
+        <a href="/categoria/bem-estar/">Bem-estar</a>
+        <a href="/categoria/noticias/">Notícias</a>
+        <div class="blog-nav-dropdown">
+          <button class="dropdown-toggle" onclick="toggleDropdown(this)">Mais</button>
+          <div class="dropdown-menu">
+            <a href="/categoria/doencas/">Doenças</a>
+            <a href="/categoria/saude-da-mulher/">Saúde da Mulher</a>
+            <a href="/categoria/saude-mental/">Saúde Mental</a>
+            <a href="/categoria/saude-bucal/">Saúde Bucal</a>
+            <a href="/categoria/nutricao/">Nutrição</a>
+            <a href="/categoria/fitness/">Fitness</a>
+          </div>
+        </div>
+      </nav>
+
+      <button class="blog-menu-toggle" onclick="toggleMobileMenu(this)" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="blog-mobile-menu">
+      <a href="/categoria/saude/">Saúde</a>
+      <a href="/categoria/bem-estar/">Bem-estar</a>
+      <a href="/categoria/noticias/">Notícias</a>
+      <a href="/categoria/doencas/">Doenças</a>
+      <a href="/categoria/saude-da-mulher/">Saúde da Mulher</a>
+      <a href="/categoria/saude-mental/">Saúde Mental</a>
+      <a href="/categoria/saude-bucal/">Saúde Bucal</a>
+      <a href="/categoria/nutricao/">Nutrição</a>
+      <a href="/categoria/fitness/">Fitness</a>
+    </div>
+  </header>
+
+  <script>
+    function toggleDropdown(btn) {
+      const menu = btn.nextElementSibling;
+      btn.classList.toggle('active');
+      menu.classList.toggle('open');
+      document.addEventListener('click', function closeMenu(e) {
+        if (!btn.parentElement.contains(e.target)) {
+          menu.classList.remove('open');
+          btn.classList.remove('active');
+          document.removeEventListener('click', closeMenu);
+        }
+      });
+    }
+
+    function toggleMobileMenu(btn) {
+      const menu = document.querySelector('.blog-mobile-menu');
+      btn.classList.toggle('active');
+      menu.classList.toggle('open');
+    }
+  </script>
+
+  <main class="blog-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Início</a> / <a href="/categoria/saude-mental/">Saúde Mental</a>
+      </div>
+
+      <div class="page-grid">
+        <article class="post-article">
+          <div class="article-badge">Saúde Mental</div>
+
+          <h1 class="post-title">Ansiedade e depressão: como os manauaras estão lidando?</h1>
+
+          <p class="post-excerpt">Saiba como os manauaras enfrentam ansiedade e depressão, conheça desafios regionais e descubra as soluções locais para fortalecer a saúde mental em Manaus.</p>
+
+          <div class="post-meta">
+             • por Luiz Guilherme
+          </div>
+
+          <div class="post-cover">
+            <img src="/img/pexels-photo-7447058.jpeg" alt="Ansiedade e depressão: como os manauaras estão lidando?">
+          </div>
+
+          <div class="post-content">
+            
+
+<p>Ansiedade e depressão são desafios cada vez mais frequentes na vida urbana, atingindo pessoas das mais diversas idades e contextos socioeconômicos. Em Manaus, cidade marcada por seu clima único e cultura vibrante, essas questões de saúde mental têm ganhado destaque, especialmente diante das mudanças recentes na sociedade.<br><br>Com informações cada vez mais disponíveis e discussões mais abertas sobre o tema, cresce a preocupação em entender de que maneira os manauaras estão enfrentando essas situações. Neste artigo, vamos explorar como fatores regionais influenciam o dia a dia de quem vive na cidade e quais estratégias têm sido adotadas para promover o bem-estar emocional em Manaus.</p>
+
+<h2>Entendendo a Ansiedade e a Depressão em Manaus</h2>
+
+<p>Questões emocionais, como ansiedade e depressão, afetam profundamente as rotinas e relações dos manauaras. Embora esses transtornos sejam universais, fatores específicos do contexto amazônico influenciam a forma como os sintomas se manifestam e são percebidos.<br><br>O calor intenso, a umidade elevada e a dinâmica urbana acelerada podem atuar como gatilhos ou intensificadores do estresse cotidiano. Em Manaus, nota-se que o preconceito e a falta de informação ainda estão presentes, mas pouco a pouco cresce uma conscientização sobre a necessidade de buscar auxílio especializado.<br><br>Profissionais como o <a href="https://psiquiatramanaus.com.br">Psiquiatra em Manaus</a> vêm sendo procurados por aqueles que reconhecem a importância de cuidar da saúde mental.</p>
+
+<h2>Fatores Contribuintes Específicos da Região</h2>
+
+<p>O ambiente amazônico apresenta desafios singulares para a saúde mental. O isolamento causado por distâncias geográficas, as mudanças climáticas bruscas e até questões relacionadas à economia local podem elevar os níveis de preocupação dos manauaras.<br><br>Além disso, o ritmo de crescimento acelerado da cidade trouxe consigo transformações nos estilos de vida e nas relações interpessoais. Esses fatores, somados às pressões sociais, acabam formando um cenário onde pessoas de diferentes idades podem se sentir sobrecarregadas.<br><br>Com isso, entender esses elementos regionais é fundamental para elaborar abordagens de prevenção, identificação e tratamento adequadas às particularidades da população de Manaus.</p>
+
+
+<div class="content-inline-related">
+  <span class="content-inline-related-label">Veja mais:</span>
+  <a href="https://dotcomnation.co/nutricionista-online-dieta-hipertensos-diabeticos/" class="content-inline-related-link">Nutricionista online pode ajudar com dieta para hipertensos e diabéticos?</a>
+</div>
+
+<h2>Estratégias Locais para o Enfrentamento da Saúde Mental</h2>
+
+<p>Buscar alternativas que respeitem a cultura local faz toda a diferença no enfrentamento da ansiedade e depressão.<br><br>Muitos manauaras têm recorrido ao apoio de grupos de convivência, rodas de conversa e até mesmo práticas da medicina integrativa, como a fitoterapia regional, para lidar com sintomas do cotidiano.<br><br>Além do suporte profissional, a valorização das redes familiares e a aproximação da natureza, comum em áreas urbanas próximas à floresta, funcionam como potentes aliados na prevenção e no tratamento desses transtornos.<br><br>A combinação dessas estratégias fortalece o senso de comunidade e oferece meios mais acessíveis e acolhedores para quem necessita de suporte emocional em Manaus.</p>
+
+<h2>Recursos e Apoio Disponíveis para os Manauaras</h2>
+
+<p>Encontrar ajuda adequada é um passo crucial para quem enfrenta ansiedade e depressão. Em Manaus, há diversas iniciativas, tanto públicas quanto privadas, que oferecem suporte psicológico e psiquiátrico à população.<br><br>Há unidades do SUS com atendimento especializado, além de clínicas particulares e serviços online que facilitam o acesso à terapia e acompanhamento médico.<br><br>Grupos de apoio comunitário também surgem como alternativas importantes, promovendo ambientes de escuta e troca de experiências.<br><br>Informar-se sobre os recursos disponíveis é essencial para dar início a um processo de cuidado integral, que leve em conta as necessidades e particularidades dos moradores da capital amazonense.</p>
+
+
+<div class="content-inline-related">
+  <span class="content-inline-related-label">Veja mais:</span>
+  <a href="https://dotcomnation.co/botox-natural-mitos-verdades-sao-paulo/" class="content-inline-related-link">Botox natural existe? Mitos e verdades sobre o procedimento em São Paulo</a>
+</div>
+
+<h2>Impacto da Pandemia na Saúde Mental em Manaus</h2>
+
+<p>A pandemia acentuou problemas já existentes e trouxe novos desafios para a saúde mental dos habitantes de Manaus. O isolamento social, o luto e as mudanças abruptas na rotina aumentaram os índices de ansiedade e depressão, principalmente entre jovens e idosos.<br><br>Ao mesmo tempo, cresceu a busca por serviços de assistência emocional e informação de qualidade.<br><br>A adaptação a essa nova realidade demandou criatividade: o uso de tecnologias para consultas online e grupos de apoio virtuais tornou-se parte essencial do enfrentamento coletivo.<br><br>Superar esse período exigiu e ainda exige resiliência, solidariedade e um olhar atento às condições emocionais da população manauara.</p>
+
+<h2>Conclusão</h2>
+
+<p>Enfrentar ansiedade e depressão em Manaus demanda sensibilidade às particularidades culturais, sociais e ambientais da região.<br><br>A ampliação do acesso a informações e recursos, bem como o fortalecimento de laços comunitários e familiares, são caminhos promissores para melhorar a saúde mental dos manauaras.<br><br>Estratégias que unem saberes tradicionais e práticas modernas têm se mostrado eficazes para promover o equilíbrio emocional.<br><br>O incentivo ao diálogo aberto e à procura por profissionais qualificados, como o <a href="https://psiquiatramanaus.com.br">Psiquiatra em Manaus</a>, contribui para uma sociedade mais saudável e preparada para enfrentar desafios coletivos.<br><br>Cuidar da mente é essencial para viver melhor em qualquer contexto.</p>
+          </div>
+
+          <div class="post-footer">
+            Última atualização: 
+          </div>
+
+          <section class="post-bottom">
+            <h2 class="section-title">Mais conteúdos para você</h2>
+            <div id="bottom-featured-posts">
+              <p class="loading-text">Carregando conteúdos...</p>
+            </div>
+          </section>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="sidebar-block">
+            <h2 class="section-title">Posts recentes</h2>
+            <div id="recent-posts">
+              <p class="loading-text">Carregando posts recentes...</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-tuasaude">
+      <div class="container footer-wrapper">
+        <a href="/" class="footer-logo">
+          <img src="/img/logo-blog.webp" alt="DOTCOM Nation" class="footer-logo__image">
+        </a>
+        <div class="footer-text">
+          Conteúdos informativos, atualizados e organizados para facilitar sua navegação e ajudar na busca por informação.
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
+            <li><a href="/politica-de-privacidade/">Política de privacidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <div class="footer-update-copy">
+            <span>© 2026 DOTCOM Nation</span>
+            <span class="dot"></span>
+            <span>Todos os direitos reservados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function fetchJson(path) {
+      const response = await fetch(path, { cache: 'no-cache' });
+      if (!response.ok) throw new Error('Erro ao carregar ' + path);
+      return response.json();
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function normalizePath(url) {
+      try {
+        const parsed = new URL(url, window.location.origin);
+        return parsed.pathname.replace(/\/+$/, '') || '/';
+      } catch {
+        return String(url || '')
+          .replace(window.location.origin, '')
+          .replace(/\/+$/, '') || '/';
+      }
+    }
+
+    function renderRecentPosts(posts) {
+      const container = document.getElementById('recent-posts');
+      if (!container) return;
+      if (!posts.length) {
+        container.innerHTML = '<p class="empty-text">Nenhum post recente encontrado.</p>';
+        return;
+      }
+      container.innerHTML = `
+        <ul class="sidebar-list">
+          ${posts.map(post => `
+            <li class="sidebar-item">
+              <a href="${escapeHtml(post.url)}" class="sidebar-link">${escapeHtml(post.title)}</a>
+              <span class="sidebar-meta">${escapeHtml(post.date || '')}${post.category ? ' • ' + escapeHtml(post.category) : ''}</span>
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    }
+
+    function renderBottomFeatured(posts) {
+      const container = document.getElementById('bottom-featured-posts');
+      if (!container) return;
+      if (!posts.length) {
+        container.innerHTML = '<p class="empty-text">Nenhum conteúdo adicional encontrado.</p>';
+        return;
+      }
+      container.innerHTML = `
+        <ul class="bottom-list">
+          ${posts.map(post => `
+            <li class="bottom-item">
+              <a href="${escapeHtml(post.url)}" class="bottom-link">${escapeHtml(post.title)}</a>
+              <span class="bottom-meta">${escapeHtml(post.date || '')}${post.category ? ' • ' + escapeHtml(post.category) : ''}</span>
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    }
+
+    async function loadDynamicPostWidgets() {
+      try {
+        const currentPath = normalizePath(window.location.pathname);
+        const [recentPostsRaw, featuredPostsRaw] = await Promise.all([
+          fetchJson('/data/recent-posts.json'),
+          fetchJson('/data/featured-posts.json')
+        ]);
+        const recentPosts = Array.isArray(recentPostsRaw) ? recentPostsRaw : [];
+        const featuredPosts = Array.isArray(featuredPostsRaw) ? featuredPostsRaw : [];
+        const filteredRecent = recentPosts.filter(post => normalizePath(post.url) !== currentPath).slice(0, 6);
+        const bottomFeatured = featuredPosts.filter(post => normalizePath(post.url) !== currentPath).slice(0, 12);
+        renderRecentPosts(filteredRecent);
+        renderBottomFeatured(bottomFeatured);
+      } catch (error) {
+        console.error(error);
+        const recentEl = document.getElementById('recent-posts');
+        const bottomEl = document.getElementById('bottom-featured-posts');
+        if (recentEl) recentEl.innerHTML = '<p class="empty-text">Não foi possível carregar os posts recentes.</p>';
+        if (bottomEl) bottomEl.innerHTML = '<p class="empty-text">Não foi possível carregar os conteúdos relacionados.</p>';
+      }
+    }
+
+    loadDynamicPostWidgets();
+  </script>
+</body>
+</html>
