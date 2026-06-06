@@ -1,5 +1,77 @@
 [
   {
+    "id": 80,
+    "title": "Guia rápido para quem precisa de dentista com urgência em Brasília",
+    "slug": "/dentista-urgencia-brasilia",
+    "url": "https://dotcomnation.co/dentista-urgencia-brasilia/",
+    "date": "",
+    "category": "Saúde Bucal",
+    "excerpt": "Saiba como identificar emergências odontológicas e descubra onde encontrar dentista urgente em Brasília. Garanta alívio rápido e evite complicações!",
+    "cover_image": "/img/pexels-photo-5622026.jpeg",
+    "cover_image_alt": "Guia rápido para quem precisa de dentista com urgência em Brasília",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 79,
+    "title": "Saúde mental em Balsas: quando procurar um psiquiatra?",
+    "slug": "/saude-mental-balsas-quando-procurar-psiquiatra",
+    "url": "https://dotcomnation.co/saude-mental-balsas-quando-procurar-psiquiatra/",
+    "date": "",
+    "category": "Saúde Mental",
+    "excerpt": "Descubra os sinais que indicam quando procurar um psiquiatra em Balsas e como o cuidado especializado pode transformar sua saúde mental e bem-estar.",
+    "cover_image": "/img/pexels-photo-5700150.jpeg",
+    "cover_image_alt": "Saúde mental em Balsas: quando procurar um psiquiatra?",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 78,
+    "title": "Ansiedade e depressão: como os manauaras estão lidando?",
+    "slug": "/ansiedade-depressao-manaus",
+    "url": "https://dotcomnation.co/ansiedade-depressao-manaus/",
+    "date": "",
+    "category": "Saúde Mental",
+    "excerpt": "Saiba como os manauaras enfrentam ansiedade e depressão, conheça desafios regionais e descubra as soluções locais para fortalecer a saúde mental em Manaus.",
+    "cover_image": "/img/pexels-photo-7447058.jpeg",
+    "cover_image_alt": "Ansiedade e depressão: como os manauaras estão lidando?",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 77,
+    "title": "Problemas de pele comuns em quem vive em São Paulo",
+    "slug": "/problemas-pele-sao-paulo",
+    "url": "https://dotcomnation.co/problemas-pele-sao-paulo/",
+    "date": "",
+    "category": "Bem Estar",
+    "excerpt": "Entenda como o clima e a poluição de São Paulo afetam sua pele e veja dicas práticas para prevenir, tratar e saber quando buscar um dermatologista.",
+    "cover_image": "/img/pexels-photo-4586740.jpeg",
+    "cover_image_alt": "Problemas de pele comuns em quem vive em São Paulo",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 76,
+    "title": "Implantes dentários em São Paulo: vale a pena investir no tratamento?",
+    "slug": "/implantes-dentarios-sao-paulo",
+    "url": "https://dotcomnation.co/implantes-dentarios-sao-paulo/",
+    "date": "",
+    "category": "Saúde Bucal",
+    "excerpt": "Descubra se o investimento em implantes dentários em São Paulo vale a pena, conheça os principais benefícios, custos envolvidos e como escolher uma clínica de confiança.",
+    "cover_image": "/img/pexels-photo-6627330.jpeg",
+    "cover_image_alt": "Implantes dentários em São Paulo: vale a pena investir no tratamento?",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 75,
+    "title": "Odontopediatria em Moema: onde levar seus filhos?",
+    "slug": "/odontopediatria-moema-onde-levar-filhos",
+    "url": "https://dotcomnation.co/odontopediatria-moema-onde-levar-filhos/",
+    "date": "",
+    "category": "Saúde Bucal",
+    "excerpt": "Conheça as melhores clínicas de odontopediatria em Moema e veja dicas para garantir uma experiência positiva e sorrisos saudáveis para seus filhos.",
+    "cover_image": "/img/pexels-photo-8413334.jpeg",
+    "cover_image_alt": "Odontopediatria em Moema: onde levar seus filhos?",
+    "author": "Luiz Guilherme"
+  },
+  {
     "id": 74,
     "title": "Como escolher uma clínica segura para botox em Curitiba",
     "slug": "/clinica-segura-botox-curitiba",
