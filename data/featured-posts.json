@@ -1,5 +1,77 @@
 [
   {
+    "id": 86,
+    "title": "Como é o pós-operatório dos procedimentos mais comuns?",
+    "slug": "/pos-operatorio-procedimentos-comuns",
+    "url": "https://dotcomnation.co/pos-operatorio-procedimentos-comuns/",
+    "date": "",
+    "category": "Fitness",
+    "excerpt": "Entenda como é o pós-operatório dos procedimentos mais comuns e veja dicas práticas para garantir uma recuperação mais tranquila, segura e sem surpresas.",
+    "cover_image": "/img/pexels-photo-4769133.jpeg",
+    "cover_image_alt": "Como é o pós-operatório dos procedimentos mais comuns?",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 85,
+    "title": "O que evitar nos primeiros dias após o procedimento?",
+    "slug": "/o-que-evitar-pos-procedimento",
+    "url": "https://dotcomnation.co/o-que-evitar-pos-procedimento/",
+    "date": "",
+    "category": "Bem Estar",
+    "excerpt": "Saiba quais cuidados tomar nos primeiros dias após o procedimento e evite erros que podem comprometer seus resultados. Garanta uma recuperação segura!",
+    "cover_image": "/img/pexels-photo-3985310.jpeg",
+    "cover_image_alt": "O que evitar nos primeiros dias após o procedimento?",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 84,
+    "title": "Quanto tempo demora para aparecer o resultado do botox?",
+    "slug": "/quanto-tempo-resultado-botox",
+    "url": "https://dotcomnation.co/quanto-tempo-resultado-botox/",
+    "date": "",
+    "category": "Notícias",
+    "excerpt": "Saiba em quantos dias o efeito do botox começa a aparecer e quais fatores aceleram ou retardam o resultado. Dicas para otimizar seu rejuvenescimento!",
+    "cover_image": "/img/pexels-photo-3985316.jpeg",
+    "cover_image_alt": "Quanto tempo demora para aparecer o resultado do botox?",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 83,
+    "title": "Botox para rugas de expressão: tudo o que você precisa saber",
+    "slug": "/botox-rugas-expressao",
+    "url": "https://dotcomnation.co/botox-rugas-expressao/",
+    "date": "",
+    "category": "Notícias",
+    "excerpt": "Saiba como o botox pode suavizar rugas de expressão, seus benefícios, o que esperar do procedimento e dicas para um resultado natural e seguro.",
+    "cover_image": "/img/pexels-photo-14438369.jpeg",
+    "cover_image_alt": "Botox para rugas de expressão: tudo o que você precisa saber",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 82,
+    "title": "Atendimento psicológico em São José dos Campos: o que esperar da primeira consulta?",
+    "slug": "/atendimento-psicologico-sao-jose-dos-campos-primeira-consulta",
+    "url": "https://dotcomnation.co/atendimento-psicologico-sao-jose-dos-campos-primeira-consulta/",
+    "date": "",
+    "category": "Saúde Mental",
+    "excerpt": "Descubra como funciona a primeira consulta de atendimento psicológico em São José dos Campos e dê o primeiro passo para o autoconhecimento e bem-estar emocional.",
+    "cover_image": "/img/pexels-photo-6712671.jpeg",
+    "cover_image_alt": "Atendimento psicológico em São José dos Campos: o que esperar da primeira consulta?",
+    "author": "Luiz Guilherme"
+  },
+  {
+    "id": 81,
+    "title": "Onde encontrar atendimento odontológico acessível em Taguatinga?",
+    "slug": "/atendimento-odontologico-acessivel-taguatinga",
+    "url": "https://dotcomnation.co/atendimento-odontologico-acessivel-taguatinga/",
+    "date": "",
+    "category": "Saúde Bucal",
+    "excerpt": "Descubra onde encontrar atendimento odontológico acessível em Taguatinga, conheça clínicas e programas que cabem no seu bolso e mantenha sua saúde bucal em dia.",
+    "cover_image": "/img/pexels-photo-5355833.jpeg",
+    "cover_image_alt": "Onde encontrar atendimento odontológico acessível em Taguatinga?",
+    "author": "Luiz Guilherme"
+  },
+  {
     "id": 80,
     "title": "Guia rápido para quem precisa de dentista com urgência em Brasília",
     "slug": "/dentista-urgencia-brasilia",
