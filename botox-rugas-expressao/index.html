@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Botox para rugas de expressão: tudo o que você precisa saber</title>
+  <meta name="description" content="Descubra tudo sobre botox para rugas de expressão, como funciona, benefícios e cuidados. Veja como conquistar uma pele rejuvenescida e segura!" />
+  <link rel="stylesheet" href="/css/blog-theme.css" />
+  <style>
+    .container {
+      width: min(100% - 32px, 1120px);
+      margin: 0 auto;
+    }
+
+    .blog-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .blog-header__top {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .blog-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .blog-logo__image {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .blog-main-nav {
+      display: none;
+    }
+
+    /* NAV DROPDOWN */
+    .blog-nav-dropdown { position: relative; }
+    .dropdown-toggle {
+      display: flex; align-items: center; gap: 4px;
+      color: #3d3d3d; font-size: 14px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      background: none; border: none; cursor: pointer;
+      padding: 0; font-family: inherit;
+    }
+    .dropdown-toggle:hover { color: #36b1df; }
+    .dropdown-toggle::after { content: "▾"; font-size: 12px; transition: transform 0.2s ease; }
+    .dropdown-toggle.active::after { transform: rotate(180deg); }
+    .dropdown-menu {
+      display: none; position: absolute; top: calc(100% + 12px); right: 0;
+      background: #fff; border: 1px solid #e0e0e0; border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08); min-width: 200px; z-index: 100; overflow: hidden;
+    }
+    .dropdown-menu.open { display: block; }
+    .dropdown-menu a {
+      display: block; padding: 12px 16px; color: #3d3d3d;
+      font-size: 14px; font-weight: 500; text-transform: uppercase;
+      text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: background 0.2s ease;
+    }
+    .dropdown-menu a:last-child { border-bottom: none; }
+    .dropdown-menu a:hover { background: #f5fbff; color: #36b1df; }
+
+    /* HAMBURGUER */
+    .blog-menu-toggle {
+      display: flex; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .blog-menu-toggle span { display: block; width: 24px; height: 2px; background: #3d3d3d; border-radius: 2px; transition: all 0.3s ease; }
+    .blog-menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .blog-menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .blog-menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* MOBILE MENU */
+    .blog-mobile-menu { display: none; flex-direction: column; background: #fff; border-top: 1px solid #e0e0e0; padding: 16px 0; }
+    .blog-mobile-menu.open { display: flex; }
+    .blog-mobile-menu a { padding: 12px 16px; color: #3d3d3d; font-size: 14px; font-weight: 600; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid #f0f0f0; }
+    .blog-mobile-menu a:last-child { border-bottom: none; }
+    .blog-mobile-menu a:hover { color: #36b1df; }
+
+    .blog-page {
+      padding: 24px 0 56px;
+    }
+
+    .breadcrumbs {
+      margin: 0 0 16px;
+      color: #7a7a7a;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .breadcrumbs a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 32px;
+    }
+
+    .post-article { min-width: 0; }
+
+    .article-badge { margin-bottom: 14px; }
+
+    .post-title {
+      color: #3d3d3d;
+      font-size: 34px;
+      line-height: 42px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .post-excerpt {
+      color: #3d3d3d;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    .post-meta {
+      color: #7a7a7a;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    .post-cover {
+      margin-bottom: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+
+    .post-cover img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .post-content { color: #3d3d3d; }
+
+    .post-content h1,
+    .post-content h2,
+    .post-content h3 {
+      color: #3d3d3d;
+      font-weight: 600;
+    }
+
+    .post-content h1 { font-size: 30px; line-height: 38px; margin: 0 0 18px; }
+    .post-content h2 { font-size: 26px; line-height: 34px; margin: 32px 0 14px; }
+    .post-content h3 { font-size: 22px; line-height: 30px; margin: 24px 0 12px; }
+
+    .post-content p,
+    .post-content li { font-size: 18px; line-height: 30px; }
+
+    .post-content p { margin-bottom: 18px; }
+    .post-content ul, .post-content ol { margin: 0 0 20px 22px; }
+    .post-content li { margin-bottom: 8px; }
+    .post-content a { color: #36b1df; text-decoration: underline; }
+    .post-content img { width: 100%; display: block; border-radius: 8px; margin: 24px 0; }
+    .post-content blockquote {
+      margin: 24px 0; padding: 16px 20px;
+      border-left: 4px solid #36b1df;
+      background: #f2f6f9; border-radius: 8px;
+    }
+
+    .post-footer {
+      margin-top: 32px; padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      color: #7a7a7a; font-size: 14px; line-height: 20px;
+    }
+
+    .content-inline-related {
+      margin: 28px 0 26px; padding-left: 14px;
+      border-left: 4px solid #e67e22;
+      font-size: 16px; line-height: 24px;
+    }
+
+    .content-inline-related-label { font-weight: 700; color: #3d3d3d; }
+    .content-inline-related-link { color: #e67e22; font-weight: 600; text-decoration: underline; }
+
+    .post-bottom {
+      margin-top: 36px; border-top: 1px solid #e0e0e0; padding-top: 24px;
+    }
+
+    .section-title {
+      color: #3d3d3d; font-size: 26px; line-height: 34px;
+      font-weight: 600; margin-bottom: 20px;
+    }
+
+    .bottom-list, .sidebar-list { list-style: none; margin: 0; padding: 0; }
+
+    .bottom-item, .sidebar-item {
+      padding: 16px 0; border-bottom: 1px solid #e0e0e0;
+    }
+
+    .bottom-item:first-child, .sidebar-item:first-child { padding-top: 0; }
+    .bottom-item:last-child, .sidebar-item:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .bottom-link, .sidebar-link {
+      display: block; color: #3d3d3d;
+      font-size: 18px; line-height: 26px;
+      font-weight: 600; text-decoration: none;
+    }
+
+    .bottom-meta, .sidebar-meta {
+      display: block; margin-top: 6px;
+      color: #7a7a7a; font-size: 13px; line-height: 18px;
+    }
+
+    .post-sidebar { min-width: 0; }
+
+    .sidebar-block {
+      position: sticky; top: 100px;
+      border-top: 1px solid #e0e0e0; padding-top: 20px;
+    }
+
+    .loading-text, .empty-text { color: #7a7a7a; font-size: 14px; line-height: 20px; }
+
+    #footer {
+      background: #ebf0f4; margin-top: 64px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    #footer .footer-tuasaude { padding: 40px 0 0; }
+
+    #footer .footer-wrapper {
+      display: grid; grid-template-columns: 1fr; gap: 24px;
+    }
+
+    .footer-logo {
+      display: inline-flex; align-items: center;
+      gap: 10px; text-decoration: none;
+    }
+
+    .footer-logo__image { height: 36px; width: auto; display: block; }
+
+    .footer-text { color: #3d3d3d; font-size: 14px; line-height: 22px; max-width: 640px; }
+
+    .footer-menu ul {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-direction: column; gap: 10px;
+    }
+
+    .footer-menu ul li a { color: #3d3d3d; font-size: 14px; line-height: 20px; text-decoration: none; }
+
+    .footer-group { border-top: 1px solid #e0e0e0; margin-top: 8px; }
+
+    .footer-update-copy {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 10px; padding: 20px 0; color: #7a7a7a;
+      font-size: 12px; line-height: 16px;
+    }
+
+    .footer-update-copy .dot {
+      width: 4px; height: 4px; border-radius: 50%; background: #36b1df;
+    }
+
+    @media screen and (min-width: 1050px) {
+      .blog-main-nav {
+        display: flex; align-items: center; gap: 32px;
+        flex: 1; justify-content: center;
+      }
+
+      .blog-main-nav a {
+        color: #3d3d3d; text-decoration: none;
+        font-size: 14px; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.5px;
+        transition: color 0.2s ease;
+      }
+
+      .blog-main-nav a:hover { color: #36b1df; }
+
+      .blog-menu-toggle { display: none; }
+      .blog-mobile-menu { display: none !important; }
+
+      .page-grid {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 48px;
+      }
+
+      #footer .footer-wrapper {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        align-items: start;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/webp" href="/img/favicon-medico.webp">
+  <link rel="shortcut icon" href="/img/favicon-medico.webp">
+  <link rel="apple-touch-icon" href="/img/favicon-medico.webp">
+  <meta name="google-site-verification" content="f8jkzQQ-bE1aPU8BJPA9cSEnC0AMyIPylp1HwGU_MK0" />
+</head>
+<body>
+  <header class="blog-header">
+    <div class="container blog-header__top">
+      <a href="https://dotcomnation.co" class="blog-logo">
+        <img src="/img/logo-blog.webp" alt="DOTCOM Nation" class="blog-logo__image">
+      </a>
+
+      <nav class="blog-main-nav">
+        <a href="/categoria/saude/">Saúde</a>
+        <a href="/categoria/bem-estar/">Bem-estar</a>
+        <a href="/categoria/noticias/">Notícias</a>
+        <div class="blog-nav-dropdown">
+          <button class="dropdown-toggle" onclick="toggleDropdown(this)">Mais</button>
+          <div class="dropdown-menu">
+            <a href="/categoria/doencas/">Doenças</a>
+            <a href="/categoria/saude-da-mulher/">Saúde da Mulher</a>
+            <a href="/categoria/saude-mental/">Saúde Mental</a>
+            <a href="/categoria/saude-bucal/">Saúde Bucal</a>
+            <a href="/categoria/nutricao/">Nutrição</a>
+            <a href="/categoria/fitness/">Fitness</a>
+          </div>
+        </div>
+      </nav>
+
+      <button class="blog-menu-toggle" onclick="toggleMobileMenu(this)" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="blog-mobile-menu">
+      <a href="/categoria/saude/">Saúde</a>
+      <a href="/categoria/bem-estar/">Bem-estar</a>
+      <a href="/categoria/noticias/">Notícias</a>
+      <a href="/categoria/doencas/">Doenças</a>
+      <a href="/categoria/saude-da-mulher/">Saúde da Mulher</a>
+      <a href="/categoria/saude-mental/">Saúde Mental</a>
+      <a href="/categoria/saude-bucal/">Saúde Bucal</a>
+      <a href="/categoria/nutricao/">Nutrição</a>
+      <a href="/categoria/fitness/">Fitness</a>
+    </div>
+  </header>
+
+  <script>
+    function toggleDropdown(btn) {
+      const menu = btn.nextElementSibling;
+      btn.classList.toggle('active');
+      menu.classList.toggle('open');
+      document.addEventListener('click', function closeMenu(e) {
+        if (!btn.parentElement.contains(e.target)) {
+          menu.classList.remove('open');
+          btn.classList.remove('active');
+          document.removeEventListener('click', closeMenu);
+        }
+      });
+    }
+
+    function toggleMobileMenu(btn) {
+      const menu = document.querySelector('.blog-mobile-menu');
+      btn.classList.toggle('active');
+      menu.classList.toggle('open');
+    }
+  </script>
+
+  <main class="blog-page">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Início</a> / <a href="/categoria/noticias/">Notícias</a>
+      </div>
+
+      <div class="page-grid">
+        <article class="post-article">
+          <div class="article-badge">Notícias</div>
+
+          <h1 class="post-title">Botox para rugas de expressão: tudo o que você precisa saber</h1>
+
+          <p class="post-excerpt">Saiba como o botox pode suavizar rugas de expressão, seus benefícios, o que esperar do procedimento e dicas para um resultado natural e seguro.</p>
+
+          <div class="post-meta">
+             • por Luiz Guilherme
+          </div>
+
+          <div class="post-cover">
+            <img src="/img/pexels-photo-14438369.jpeg" alt="Botox para rugas de expressão: tudo o que você precisa saber">
+          </div>
+
+          <div class="post-content">
+            
+
+<p>Quando olhamos no espelho e percebemos linhas finas ou marcas em áreas como testa, ao redor dos olhos ou entre as sobrancelhas, é comum surgir o desejo de amenizar esses sinais. Surgem então muitas dúvidas sobre como agir e quais tratamentos são realmente eficazes e seguros.<br><br>O botox é uma das opções mais procuradas por quem busca suavizar as rugas de expressão e recuperar um visual mais jovial. Mas, afinal, como ele funciona? Para entender melhor, vale conhecer o que são essas rugas, por que surgem e como o botox pode agir de maneira rápida e segura para conquistar resultados naturais. Acompanhe o artigo para tirar todas as suas dúvidas!</p>
+
+<h2>O que são rugas de expressão e por que elas aparecem</h2>
+
+<p>Linhas e marcas que surgem com o tempo refletem, principalmente, movimentos repetidos do rosto, como sorrir, franzir a testa ou apertar os olhos. Essas são as conhecidas rugas de expressão, que começam a aparecer com mais evidência a partir dos 30 anos, devido à diminuição da produção de colágeno e elastina na pele.<br><br>Fatores como exposição solar, estresse e genética aceleram esse processo, tornando as linhas mais visíveis. Embora sejam um sinal natural do envelhecimento, muitas pessoas buscam alternativas para suavizá-las. Compreender o que desencadeia o surgimento dessas rugas é essencial para escolher o melhor tratamento estético, como o botox, que tem sido cada vez mais procurado.</p>
+
+<h2>Como o botox atua no combate às rugas de expressão</h2>
+
+<p>A toxina botulínica, mais conhecida como botox, age bloqueando temporariamente a comunicação dos nervos com os músculos da face. Isso impede que certos músculos se contraiam de forma intensa, evitando a formação ou aprofundamento das rugas de expressão.<br><br>Após a aplicação, nota-se uma aparência mais relaxada e natural, sem perder a expressão facial. Vale lembrar que o botox não “congela” totalmente o rosto, mas suaviza as marcas, conferindo um aspecto rejuvenescido. Para quem busca resultado seguro e eficiente, consultas com profissionais qualificados são fundamentais, assim como optar por clínicas especializadas como a <a href="https://santosbotox.com.br">Botox Santos</a>, referência em procedimentos estéticos com botox.</p>
+
+
+<div class="content-inline-related">
+  <span class="content-inline-related-label">Veja mais:</span>
+  <a href="https://dotcomnation.co/odontopediatria-moema-onde-levar-filhos/" class="content-inline-related-link">Odontopediatria em Moema: onde levar seus filhos?</a>
+</div>
+
+<h2>Procedimento do botox: como é feito e o que esperar</h2>
+
+<p>O procedimento geralmente é rápido e simples, feito em consultório, sem necessidade de internação. O profissional utiliza agulhas finas para aplicar pequenas quantidades de botox em regiões estratégicas, previamente analisadas nas expressões do paciente.<br><br>O desconforto é mínimo e, em poucos minutos, a sessão está concluída. Os efeitos começam a ser percebidos em cerca de três a cinco dias após a aplicação, atingindo o resultado completo em até duas semanas. Não há necessidade de repouso prolongado, o que permite retorno quase imediato às atividades diárias.<br><br>Apesar de prático, é fundamental seguir todas as orientações pós-procedimento para otimizar os benefícios e evitar intercorrências indesejadas.</p>
+
+<h2>Cuidados e precauções antes e depois do botox</h2>
+
+<p>Antes de realizar o procedimento, é fundamental informar o profissional sobre alergias, uso de medicamentos e condições de saúde. Evitar o consumo de álcool e medicamentos que alterem a coagulação, como aspirina, nas 24 horas anteriores pode diminuir o risco de hematomas.<br><br>Após o botox, recomenda-se não esfregar o local, evitar deitar nas primeiras horas e suspender atividades físicas intensas no dia da aplicação. Seguir essas orientações auxilia na melhor absorção da toxina e previne complicações.<br><br>Pequenos inchaços ou vermelhidão podem ocorrer, mas tendem a desaparecer em poucas horas. O acompanhamento profissional assegura que o resultado seja natural e seguro, valorizando ainda mais o investimento feito.</p>
+
+
+<div class="content-inline-related">
+  <span class="content-inline-related-label">Veja mais:</span>
+  <a href="https://dotcomnation.co/nutricionista-online-dieta-hipertensos-diabeticos/" class="content-inline-related-link">Nutricionista online pode ajudar com dieta para hipertensos e diabéticos?</a>
+</div>
+
+<h2>Benefícios e possíveis efeitos colaterais do botox</h2>
+
+<p>Entre os principais benefícios do botox estão a suavização das rugas de expressão e a prevenção do avanço dessas linhas no rosto. O procedimento confere um aspecto rejuvenescido sem a necessidade de cirurgias, possui efeito temporário e previsível, o que permite ajustes em futuras aplicações.<br><br>Embora seja seguro, podem surgir efeitos colaterais leves como hematomas, dor leve ou pequenas assimetrias; casos mais graves são raros e geralmente estão ligados à aplicação inadequada ou alergias.<br><br>Para minimizar riscos, escolha profissionais experientes e estabelecimentos reconhecidos. Com os devidos cuidados, o procedimento tende a ser tranquilo, seguro e com resultados cada vez mais naturais.</p>
+
+<h2>Conclusão</h2>
+
+<p>O uso do botox para tratar rugas de expressão consolidou-se como solução eficaz para quem deseja cuidar da aparência de forma minimamente invasiva.<br><br>Ao compreender como as linhas se formam, como a toxina atua e a importância do acompanhamento profissional, fica mais fácil obter resultados satisfatórios e seguros. Seguir orientações antes e depois da aplicação é indispensável para maximizar os benefícios e evitar problemas futuros.<br><br>Optar por clínicas de referência e profissionais capacitados é o passo fundamental para quem deseja resultados naturais e duradouros. Dessa forma, cuidar da autoestima e da saúde da pele se torna uma experiência mais segura e tranquila.</p>
+          </div>
+
+          <div class="post-footer">
+            Última atualização: 
+          </div>
+
+          <section class="post-bottom">
+            <h2 class="section-title">Mais conteúdos para você</h2>
+            <div id="bottom-featured-posts">
+              <p class="loading-text">Carregando conteúdos...</p>
+            </div>
+          </section>
+        </article>
+
+        <aside class="post-sidebar">
+          <div class="sidebar-block">
+            <h2 class="section-title">Posts recentes</h2>
+            <div id="recent-posts">
+              <p class="loading-text">Carregando posts recentes...</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-tuasaude">
+      <div class="container footer-wrapper">
+        <a href="/" class="footer-logo">
+          <img src="/img/logo-blog.webp" alt="DOTCOM Nation" class="footer-logo__image">
+        </a>
+        <div class="footer-text">
+          Conteúdos informativos, atualizados e organizados para facilitar sua navegação e ajudar na busca por informação.
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
+            <li><a href="/politica-de-privacidade/">Política de privacidade</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <div class="footer-update-copy">
+            <span>© 2026 DOTCOM Nation</span>
+            <span class="dot"></span>
+            <span>Todos os direitos reservados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function fetchJson(path) {
+      const response = await fetch(path, { cache: 'no-cache' });
+      if (!response.ok) throw new Error('Erro ao carregar ' + path);
+      return response.json();
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function normalizePath(url) {
+      try {
+        const parsed = new URL(url, window.location.origin);
+        return parsed.pathname.replace(/\/+$/, '') || '/';
+      } catch {
+        return String(url || '')
+          .replace(window.location.origin, '')
+          .replace(/\/+$/, '') || '/';
+      }
+    }
+
+    function renderRecentPosts(posts) {
+      const container = document.getElementById('recent-posts');
+      if (!container) return;
+      if (!posts.length) {
+        container.innerHTML = '<p class="empty-text">Nenhum post recente encontrado.</p>';
+        return;
+      }
+      container.innerHTML = `
+        <ul class="sidebar-list">
+          ${posts.map(post => `
+            <li class="sidebar-item">
+              <a href="${escapeHtml(post.url)}" class="sidebar-link">${escapeHtml(post.title)}</a>
+              <span class="sidebar-meta">${escapeHtml(post.date || '')}${post.category ? ' • ' + escapeHtml(post.category) : ''}</span>
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    }
+
+    function renderBottomFeatured(posts) {
+      const container = document.getElementById('bottom-featured-posts');
+      if (!container) return;
+      if (!posts.length) {
+        container.innerHTML = '<p class="empty-text">Nenhum conteúdo adicional encontrado.</p>';
+        return;
+      }
+      container.innerHTML = `
+        <ul class="bottom-list">
+          ${posts.map(post => `
+            <li class="bottom-item">
+              <a href="${escapeHtml(post.url)}" class="bottom-link">${escapeHtml(post.title)}</a>
+              <span class="bottom-meta">${escapeHtml(post.date || '')}${post.category ? ' • ' + escapeHtml(post.category) : ''}</span>
+            </li>
+          `).join('')}
+        </ul>
+      `;
+    }
+
+    async function loadDynamicPostWidgets() {
+      try {
+        const currentPath = normalizePath(window.location.pathname);
+        const [recentPostsRaw, featuredPostsRaw] = await Promise.all([
+          fetchJson('/data/recent-posts.json'),
+          fetchJson('/data/featured-posts.json')
+        ]);
+        const recentPosts = Array.isArray(recentPostsRaw) ? recentPostsRaw : [];
+        const featuredPosts = Array.isArray(featuredPostsRaw) ? featuredPostsRaw : [];
+        const filteredRecent = recentPosts.filter(post => normalizePath(post.url) !== currentPath).slice(0, 6);
+        const bottomFeatured = featuredPosts.filter(post => normalizePath(post.url) !== currentPath).slice(0, 12);
+        renderRecentPosts(filteredRecent);
+        renderBottomFeatured(bottomFeatured);
+      } catch (error) {
+        console.error(error);
+        const recentEl = document.getElementById('recent-posts');
+        const bottomEl = document.getElementById('bottom-featured-posts');
+        if (recentEl) recentEl.innerHTML = '<p class="empty-text">Não foi possível carregar os posts recentes.</p>';
+        if (bottomEl) bottomEl.innerHTML = '<p class="empty-text">Não foi possível carregar os conteúdos relacionados.</p>';
+      }
+    }
+
+    loadDynamicPostWidgets();
+  </script>
+</body>
+</html>
